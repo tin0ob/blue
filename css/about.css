@@ -1,5 +1,5 @@
 body{
-  background-image:url("/home/tino/blue/blue_static/img/base/espinas.png");
+  background-image:url("../img/base/espinas.png");
   position: relative;
   background-repeat: repeat-x repeat-y;
   background-size: 25% auto;

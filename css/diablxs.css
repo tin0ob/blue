@@ -1,5 +1,5 @@
 .fondo{
-background-image:url("/home/tino/blue/blue_static/img/base/espada2.png");
+background-image:url("../img/base/espada2.png");
 background-repeat: repeat-x repeat-y;
 background-size: 13% auto;
 background-position: top 10px;

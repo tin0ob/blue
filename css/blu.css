@@ -1,5 +1,5 @@
 body{
-  background: url('/home/tino/blue/blue_static/img/base/gif-diablx.gif');
+  background: url('../img/base/gif-diablx.gif');
   background-repeat: no-repeat;
   background-position: top; /*keep it center within the centred div*/
   background-size: contain; /*use contain to make the image shrink visually*/
