@@ -1,0 +1,47 @@
+
+body[data-theme="light"] .video{
+  vertical-align: middle;
+  max-width: 560px;
+  max-height: 400px;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 10px 10px 10px 10px;
+  text-align:center;
+  box-shadow: 2px 5px 9px #888888;
+  border-radius: 15px;
+}
+
+body[data-theme="dark"] .video{
+  vertical-align: middle;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 10px 10px 10px 10px;
+  text-align:center;
+  box-shadow: 2px 5px 9px #070707;
+  border-radius: 15px;
+}
+
+body[data-theme="light"] .video #video-title{
+  color: #333;
+  transition: 0.5s;
+}
+
+body[data-theme="dark"] .video #video-title{
+  color: #fff;
+  transition: 0.5s;
+}
+
+.video #video-title:hover{
+  color: #1e40ff;
+  transform: scale(1.10) translateZ(0);
+  transition: 0.5s;
+}
+
+.projectlink img{
+  width: 560px;
+  border-radius: 10px;
+}

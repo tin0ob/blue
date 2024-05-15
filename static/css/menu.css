@@ -1,0 +1,91 @@
+
+.dropbtn {
+  position:relative;
+  border-style: none;
+  background-color: transparent;
+  color:gray;
+}
+
+@media screen and (orientation: portrait) {
+  .dropbtn {
+  font-size: 2em;
+  position:relative;
+  border-style: none;
+  background-color: transparent;
+  color:gray;
+  }
+}
+
+/* For landscape */
+
+@media screen and (orientation: landscape) {
+  .dropbtn {
+  font-size: 0.7em;
+  position:relative;
+  border-style: none;
+  background-color: transparent;
+  color:gray;
+  }
+
+  }
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  margin-top: 10px;
+  position: absolute;
+  display: inline-block;
+  height: auto;
+  width: auto;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  font-size:20px;
+  display: none;
+  position: absolute;
+  width:auto;
+  height:auto;
+  background-color: white;
+  max-width: 360px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  font-size:20px;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  z-index: 1;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1000px) and (orientation : portrait) {
+.dropdown-content a {
+font-size:35px;  
+}
+
+.dropbtn {
+font-size:0.8em;  
+}
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: white;
+}
+
+.back {
+font-size:3em;
+position:fixed;
+right:1%;
+z-index:1;
+}
+

@@ -1,0 +1,25 @@
+.gg-mail,
+.gg-mail::after {
+    display: block;
+    box-sizing: border-box;
+    height: 40px;
+    border: 5px solid
+}
+
+.gg-mail {
+    overflow: hidden;
+    transform: scale(var(--ggs,1));
+    position: relative;
+    width: 50px;
+    border-radius: 6px
+}
+
+.gg-mail::after {
+    content: "";
+    position: absolute;
+    border-radius: 6px;
+    width: 40px;
+    transform: rotate(-45deg);
+    bottom: 8px;
+    left: 0
+}  

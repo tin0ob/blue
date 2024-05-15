@@ -1,0 +1,14 @@
+{%extends 'base.html' %}
+{%block body%}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/card2.css')}}">
+  	<div style:"display:grid;  grid-template-columns: [col1-start] auto [col2-start] auto [col3-start] auto [col4-start] auto [col4-end];">
+  	<div style:"display:grid;  grid-template-columns: [col1-start] auto [col2-start] auto [col3-start] auto [col4-start] auto [col4-end];">
+    {% for imagen in imagenes %}
+        <a href="{{ url_for('static',filename=imagen.ub)}}">
+        <div style="display:block; background-image:url({{ url_for('static',filename=imagen.ub)}}); background-size:contain; background-position:center; background-repeat:no-repeat;" class="card plate">
+  	</div>
+  	</a>
+    {% endfor %}
+  	</div>
+  	</div>
+{%endblock%}

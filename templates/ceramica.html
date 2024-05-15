@@ -1,0 +1,74 @@
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/ceramica.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/menu.css')}}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+<button class="dropbtn"><i class="fa fa-bars fa-3x"></i></button>
+<div class="dropdown-content">
+<a href="/">______home</a>
+<a href="/tarot">______tarot</a>
+<a href="/ceramica">______cerámica</a>
+<a href="/murales">______murales</a>
+</div>
+</div>
+<table>
+<tr>
+<td>
+</td>
+<td>
+<div class="navbar">
+<h2 class="asd">
+<p class="asd" style="align:center">
+Ceramica
+</p>
+BLIKI BLOKI MUKI MIKI CERAMIKI BLOKI NIKI NAKI TOKI MOKITI MOKITI
+BLIKI BLOKI MUKI MIKI CERAMIKI BLOKI NIKI NAKI TOKI MOKITI MOKITI
+</div>
+</td>
+</tr>
+</table>
+{%block body%}
+<div class="row">
+<div class="column">
+{% for i in range(0,Len) %}
+<img class="myImg" src={{url_for('static',filename=imagenes[i].ub)}}>
+<div id="myModal" class="modal">
+<span class="close">&times;</span>
+<img class="modal-content" id="img01">
+</div>
+{% if loop.index%corte==0 %}
+</div>
+<div class="column">
+
+{% endif %} 
+{% endfor %}
+</div>
+</div>
+
+
+<script type="text/javascript">
+var modal = document.getElementById("myModal");
+var i;
+
+var img = document.getElementsByClassName("myImg");
+var modalImg = document.getElementById("img01");
+
+ for(i=0;i< img.length;i++)
+   {    
+    img[i].onclick = function(){
+
+    modal.style.display = "block";
+       modalImg.src = this.src;
+       modalImg.alt = this.alt;
+
+ }
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+
+span.onclick = function() { 
+   modal.style.display = "none";
+}
+</script>
+{%endblock%}

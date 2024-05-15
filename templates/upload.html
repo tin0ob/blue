@@ -1,0 +1,40 @@
+{%extends 'base.html' %}
+{%block body%}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/post.css')}}">
+<div id="content">
+  <div class="container">
+    <form class="about" action="/upload" method="post" enctype="multipart/form-data">
+      <div class="about-author">
+        <br><br>
+        <span>....</span><br><br><br>
+      </div>
+      <label>Nombre del projecto</label>
+      <br><br>
+      <input required type="text" name="name" class="inputbox" value="" placeholder="nombre!">
+      <br><br>
+      <label>descripcion del projecto</label>
+      <br><br>
+      <textarea required name="discrip" rows="2" cols="80" class="contentbox" placeholder="Descripción"></textarea>
+      <br><br>
+      <label>Password</label>
+      <br><br>
+      <input required type="password" name="password" class="inputbox" value="" placeholder="password">
+      <br><br>
+      <button type="submit" id="check">Upload</button>
+      <div id="snackbar" style="background-color: #ed2727;color: white;">Sorry! The password is not right</div>
+      <script type="text/javascript">
+        function fail() {
+          var x = document.getElementById("snackbar");
+          x.className = "show";
+          setTimeout(function() {
+            x.className = x.className.replace("show", "");
+          }, 3000);
+        }
+        if ({{res}}){
+          window.onload = fail
+        }
+      </script>
+    </form>
+  </div>
+</div>
+{%endblock%}

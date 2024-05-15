@@ -1,0 +1,97 @@
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/flip.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/gifs.css')}}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Syncopate">
+
+{%block body%}
+
+<a href="/"><img class="back" src ="/static/img/hueso.png" ></a>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="container">
+<div class="item">
+    <video id="myVid" >
+        <source src="/static/img/gifs/1.mp4" type="video/mp4">
+    </video>    
+</div>
+<div class="item" >
+    <video id="myVid2">
+        <source src="/static/img/gifs/2.mp4#t=1,3" type="video/mp4">
+    </video>    
+</div>
+<div class="item" loop>
+    <video id="myVid3">
+        <source src="/static/img/gifs/3.mp4" type="video/mp4">
+    </video>    
+</div>
+<div class="item" >
+    <video id="myVid4" loop>
+        <source src="/static/img/gifs/4.mp4" type="video/mp4">
+    </video>    
+</div>
+<div class="item" >
+    <video id="myVid5">
+        <source src="/static/img/gifs/5.mp4" type="video/mp4">
+    </video>    
+</div>
+</div>
+
+<script type="text/javascript">
+
+document.getElementById("myVid").addEventListener("mouseover", function() {
+	this.play();
+});
+
+document.getElementById("myVid").addEventListener("mouseleave", function() {
+	this.pause();
+});
+
+document.getElementById("myVid2").addEventListener("mouseover", function() {
+	this.play();
+});
+
+document.getElementById("myVid2").addEventListener("mouseleave", function() {
+	this.pause();
+});
+
+
+document.getElementById("myVid3").addEventListener("mouseover", function() {
+	this.play();
+});
+
+document.getElementById("myVid3").addEventListener("mouseleave", function() {
+	this.pause();
+});
+
+document.getElementById("myVid4").addEventListener("mouseover", function() {
+	this.play();
+});
+
+document.getElementById("myVid4").addEventListener("mouseleave", function() {
+	this.pause();
+});
+
+document.getElementById("myVid5").addEventListener("mouseover", function() {
+	this.play();
+});
+
+document.getElementById("myVid5").addEventListener("mouseleave", function() {
+	this.pause();
+});
+
+var vids = $("video"); 
+$.each(vids, function(){
+       this.controls = false; 
+});
+
+</script>
+{%endblock%}
+
